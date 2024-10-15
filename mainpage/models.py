@@ -34,4 +34,13 @@ class AdditionalInfo(models.Model):
         def __str__(self):
             return self.title
 
+class Experience(models.Model):
+    title = models.CharField("Заголовок", max_length=50)
+    text_card = RichTextField("Текст")
 
+    class Meta:
+        verbose_name = "Опыт"
+        verbose_name_plural = "Опыт"
+
+        def __str__(self):
+            return self.title
